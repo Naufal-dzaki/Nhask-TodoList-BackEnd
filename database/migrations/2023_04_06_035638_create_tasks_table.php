@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('detail');
             $table->date("deadline");
-            $table->unsignedBigInteger('status_id');
-            $table->foreign('status_id')->references('id')->on('statuses');
+            $table->foreignId('status_id')->constrained('statuses');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

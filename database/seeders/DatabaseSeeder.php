@@ -6,6 +6,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 // use App\Http\Models\User;
 use App\Models\User;
+use App\Models\Status;
+use App\Models\Task;
 
 class DatabaseSeeder extends Seeder
 {
@@ -29,5 +31,25 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password123')
         ]);
 
+        Status::create([
+            'status' => 'to-do'
+        ]);
+
+        Status::create([
+            'status' => 'on-progress'
+        ]);
+
+        Status::create([
+            'status' => 'completed'
+        ]);
+
+
+        Task::create([
+            "title" => "login system",
+            "detail" => "create login system in frontend, api using laravel and front end using react js",
+            "deadline" => "2023-03-10",
+            "status_id" => 2,
+            "user_id" => 1
+        ]);
     }
 }
