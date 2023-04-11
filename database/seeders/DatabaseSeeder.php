@@ -46,8 +46,18 @@ class DatabaseSeeder extends Seeder
 
         Task::create([
             "title" => "login system",
-            "detail" => "create login system in frontend, api using laravel and front end using react js",
             "deadline" => "2023-03-10",
+            "description" => "create login system in frontend, api using laravel and front end using react js",
+            "level" => 2,
+            "status_id" => 2,
+            "user_id" => 1
+        ]);
+
+        Task::create([
+            "title" => "drag and drop system",
+            "deadline" => "2023-03-10",
+            "description" => "create drag and drop in frontend, api using laravel and front end using react js",
+            "level" => 2,
             "status_id" => 2,
             "user_id" => 1
         ]);
