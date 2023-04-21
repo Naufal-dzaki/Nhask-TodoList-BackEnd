@@ -51,7 +51,6 @@ class TaskController extends Controller
         $validated = $validator->validated();
         $validated["user_id"] = auth()->user()->id; //set task user_id depending on authenticated user
         $validated["status_id"] = 1; //set task status to "to-do"
-        // $validated["deadline"] = Carbon::createFromFormat('d/m/y', $validated->deadline)->format('Y-m-d');
 
         try {
             $createdTask = Task::create($validated);
