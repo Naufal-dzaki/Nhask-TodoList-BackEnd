@@ -17,7 +17,6 @@ use App\Http\Controllers\TaskController;
 */
 
 Route::prefix('auth')->group(function () {
-    Route::get('/alluser', [AuthenticationController::class, 'index']);
     Route::post('/register', [AuthenticationController::class, 'register']);
     Route::post('/login', [AuthenticationController::class, 'login']);
     Route::middleware('auth:sanctum')->post('/logout', [AuthenticationController::class, 'logout']);
